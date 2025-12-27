@@ -1,0 +1,22 @@
+# Ignore secrets
+.env
+*.secrets
+*.local.lua
+
+# Logs and debug stuff
+*.log
+*.bak
+*.swp
+*.swo
+
+# Lazy.nvim generated files
+data/
+lazy-lock.json
+
+# Temp/test files
+tt.*
+foo.*
+debug/
+.repro/
+doc/tags
+.tests/
