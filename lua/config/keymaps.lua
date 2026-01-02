@@ -37,3 +37,8 @@ end, { desc = "Toggle Terminal" })
 vim.keymap.set({ "n", "t" }, "<C-t>", function()
     Snacks.terminal.toggle()
 end, { desc = "Toggle Terminal" })
+
+
+-- Search and replace word under the cursor.
+vim.keymap.set("n", "<Leader>r", [[:%s/\<<C-r><C-w>\>//g<Left><Left>]])
+
