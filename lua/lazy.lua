@@ -19,6 +19,16 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
 
+    {
+  "okuuva/auto-save.nvim",
+  version = '^1.0.0', -- see https://devhints.io/semver, alternatively use '*' to use the latest tagged release
+  cmd = "ASToggle", -- optional for lazy loading on command
+  event = { "InsertLeave", "TextChanged" }, -- optional for lazy loading on trigger events
+  opts = {
+    -- your config goes here
+    -- or just leave it empty :)
+  },
+},
     -- 1. Languages
     { import = "lazyvim.plugins.extras.lang.docker" },
     { import = "lazyvim.plugins.extras.lang.json" },

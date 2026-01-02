@@ -2,7 +2,7 @@
 -- LazyVim Keymaps
 -- ==============================
 -- Non-conflicting shortcuts for .NET and Web Development
--- 
+--
 -- Note: Plugin-specific keybinds are now configured in their respective plugin files:
 -- - DAP keybinds: lua/plugins/csharpdap.lua
 -- - Telescope keybinds: lua/plugins/telescope-config.lua
@@ -20,6 +20,10 @@ local map = vim.keymap.set
 -- ==============================
 map("n", "<C-a>", "gg<S-v>G", { desc = "Select All" })
 
+-- Usar Ctrl + t para la terminal (más compatible con Warp)
+vim.keymap.set({ "n", "t" }, "<C-t>", function()
+    Snacks.terminal.toggle()
+end, { desc = "Toggle Terminal" })
 -- ==============================
 -- Mini Surround - Quote/Bracket Operations
 -- ==============================
@@ -29,3 +33,7 @@ map("n", "<C-a>", "gg<S-v>G", { desc = "Select All" })
 -- <leader>msr = replace surround
 -- <leader>msf = find surround
 -- <leader>msh = highlight surround
+-- Usar Ctrl + t para la terminal (más compatible con Warp)
+vim.keymap.set({ "n", "t" }, "<C-t>", function()
+    Snacks.terminal.toggle()
+end, { desc = "Toggle Terminal" })
