@@ -1,5 +1,4 @@
--- ==============================
--- LazyVim Keymaps
+-- ============================== LazyVim Keymaps
 -- ==============================
 -- Non-conflicting shortcuts for .NET and Web Development
 --
@@ -38,7 +37,11 @@ vim.keymap.set({ "n", "t" }, "<C-t>", function()
     Snacks.terminal.toggle()
 end, { desc = "Toggle Terminal" })
 
-
 -- Search and replace word under the cursor.
 vim.keymap.set("n", "<Leader>r", [[:%s/\<<C-r><C-w>\>//g<Left><Left>]])
 
+--Set Leader <e> to open Neotree in float mode
+vim.keymap.set("n", "<Leader>e", ":Neotree float<CR>", { desc = "Open Neotree float", silent = true })
+
+--Toggle aerial
+vim.keymap.set("n", "<Leader>ae", ":AerialToggle<CR>", { desc = "Open Aerial", silent = true })
