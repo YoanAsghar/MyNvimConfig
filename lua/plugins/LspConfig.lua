@@ -6,6 +6,9 @@ return {
     "neovim/nvim-lspconfig",
     ft = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
     opts = {
+      inlay_hints = {
+        enabled = false,
+      },
       servers = {
         angularls = {
           root_dir = function(fname)

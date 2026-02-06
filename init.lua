@@ -44,7 +44,10 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 --Behavior
-vim.opt.clipboard:append("unnamedplus")
+vim.opt.clipboard:append("unnamedplus") -- For clipboardq
 
 --Colorscheme
 vim.cmd.colorscheme("kanagawa-paper-ink")
+
+vim.lsp.handlers["textDocument/signatureHelp"] =
+  function() end
