@@ -41,7 +41,7 @@ end, { desc = "Toggle Terminal" })
 vim.keymap.set("n", "<Leader>r", [[:%s/\<<C-r><C-w>\>//g<Left><Left>]])
 
 --Set Leader <e> to open Neotree in float mode
-vim.keymap.set("n", "<Leader>e", ":Neotree float<CR>", { desc = "Open Neotree float", silent = true })
+vim.keymap.set("n", "<Leader>e", ":Neotree<CR>", { desc = "Open Neotree float", silent = true })
 
 --Toggle aerial
 vim.keymap.set("n", "<Leader>ae", ":AerialToggle<CR>", { desc = "Open Aerial", silent = true })
