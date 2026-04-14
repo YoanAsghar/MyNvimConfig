@@ -49,5 +49,29 @@ vim.opt.clipboard:append("unnamedplus") -- For clipboardq
 --Colorscheme
 vim.cmd.colorscheme("kanagawa-paper-ink")
 
-vim.lsp.handlers["textDocument/signatureHelp"] =
-  function() end
+vim.lsp.handlers["textDocument/signatureHelp"] = function() end
+
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" })
+vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
+vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "none" })
+vim.api.nvim_set_hl(0, "TabLine", { bg = "none" })
+vim.api.nvim_set_hl(0, "TabLineFill", { bg = "none", fg = "#767676" })
+vim.api.nvim_set_hl(0, "TabLineSel", { bg = "none" })
+vim.api.nvim_set_hl(0, "ColorColumn", { bg = "none" })
+
+-- Basic settings
+vim.opt.number = true -- Line numbers
+vim.opt.relativenumber = true -- Relative line numbers
+vim.opt.cursorline = true -- Highlight current line
+vim.opt.wrap = false -- Don't wrap lines
+vim.opt.scrolloff = 10 -- Keep 10 lines above/below cursor
+vim.opt.sidescrolloff = 8 -- Keep 8 columns left/right of cursor
+
+-- Performance improvements
+vim.opt.redrawtime = 10000
+vim.opt.maxmempattern = 20000
